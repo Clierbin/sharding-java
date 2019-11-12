@@ -31,7 +31,7 @@ public class UserShardingTest {
     @Test
     public void insert(){
         UserInfoDO userInfoDO = new UserInfoDO();
-        userInfoDO.setUserId(1L);
+        userInfoDO.setUserId(3L);
         userInfoDO.setUserName("StringUtils.EMPTY");
         userInfoDO.setAccount("zhangbin");
         userInfoDO.setPassword("jhemr");

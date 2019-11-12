@@ -66,7 +66,7 @@ public class DataSourceConfig {
     private TableRuleConfiguration getUserTableRuleConfiguration() {
         TableRuleConfiguration tableRuleConfiguration = new TableRuleConfiguration();
         tableRuleConfiguration.setLogicTable("user_info");
-        tableRuleConfiguration.setActualDataNodes("ds0.user_info, ds1.user_info");
+        tableRuleConfiguration.setActualDataNodes("ds${0..1}.user_info");
         tableRuleConfiguration.setDatabaseShardingStrategyConfig(new StandardShardingStrategyConfiguration("user_id", DBShardAlgo.class.getName()));
         tableRuleConfiguration.setTableShardingStrategyConfig(new StandardShardingStrategyConfiguration("user_id", TblPreShardAlgo.class.getName(), TblRangeShardAlgo.class.getName()));
         return tableRuleConfiguration;
